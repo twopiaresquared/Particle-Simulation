@@ -1,10 +1,9 @@
-# cpp-assignment-particle-simulation
+# this was my old cpp-assignment-particle-simulation
 
 For this assignment we are going to create a particle simulation.
 
-## Setup
 
-Accept and clone the assignment from GitHub Classroom. You can find the link to the assignment from the [Student Discussion](https://github.com/orgs/ruc-sci-comp/teams/students) on GitHub.
+
 
 ## Task
 
@@ -32,13 +31,7 @@ The first function we can call `force`; it has a return type of `void` and has a
 * The distance can be computed using Pythagorean's Theorem.
 * The angle can be comuted using `std::atan2`
 
-Calculating both requires us to find the deltas in x and y position, and so to start we can create new variables `dx` and `dy` and set them equal to the differences in x and y positions. Then we can do:
-
-```c++
-double d = std::hypot(dx, dy);
-double t = std::atan2(dy, dx);
-```
-
+Calculating both requires us to find the deltas in x and y position, and so to start we can create new variables `dx` and `dy` and set them equal to the differences in x and y positions. 
 With the distance computed we can then compute the force of gravity between the two bodies using the formula:
 
 ```
@@ -54,11 +47,6 @@ Where:
 * `d` is the distance between body 1 and body 2
 
 Once we have the force we need to split it into x and y accelerations to be applied to the body. As we have a magnitude and an angle, we can compute the directional force using trigonometry; and lastly we divide it by mass to compute an acceleration (Newton's 2nd Law).
-
-```c++
-x_acceleration += f * std::cos(t) / mass;
-y_acceleration += f * std::sin(t) / mass;
-```
 
 For every particle combination we call this function and collect all of the forces, more on this later.
 
