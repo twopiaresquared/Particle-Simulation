@@ -144,6 +144,3 @@ make test
 
 If you are having issues and need help, submit your code anyway as described in the next section and send an email.
 
-## Submit
-
-Once you have the test running successfully with all tests passing, submit your assignment.
