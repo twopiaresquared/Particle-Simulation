@@ -1,0 +1,8 @@
+*.exe
+*.o
+*.d
+__pycache__
+test_output
+*.html
+*.dat
+!/test_files/**
