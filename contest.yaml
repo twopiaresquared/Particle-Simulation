@@ -1,0 +1,6 @@
+executable: main.exe
+test-cases:
+    test-01:
+        ofstreams:
+            - base-file: test_files/particle.dat
+              test-file: particle.dat
